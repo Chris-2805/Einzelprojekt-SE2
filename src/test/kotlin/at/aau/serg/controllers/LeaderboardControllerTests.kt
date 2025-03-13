@@ -22,7 +22,7 @@ class LeaderboardControllerTests {
 
     @Test
     fun test_getLeaderboard_correctScoreSorting() {
-        val first = GameResult(1, "first", 20, 10.0)
+        val first = GameResult(1, "first", 20, 30.0)
         val second = GameResult(2, "second", 15, 25.0)
         val third = GameResult(3, "third", 10, 40.0)
 
