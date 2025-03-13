@@ -23,7 +23,12 @@ dependencies {
     implementation("io.github.pdvrieze.xmlutil:core:0.90.3")
     implementation("io.github.pdvrieze.xmlutil:serialization:0.90.3")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
     implementation("io.ktor:ktor-client-cio:2.3.13")
+    implementation("io.github.pdvrieze.xmlutil:core:0.90.3")
+    implementation("io.github.pdvrieze.xmlutil:serialization:0.90.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
@@ -35,4 +40,12 @@ tasks.withType<Test> {
 }
 kotlin {
     jvmToolchain(17)
+}
+
+tasks.withType<org.springframework.boot.gradle.tasks.run.BootRun> {
+    mainClass.set("at.aau.serg.SpringAppKt")
+}
+
+tasks.withType<org.gradle.jvm.tasks.Jar> {
+    manifest.attributes["Main-Class"] = "at.aau.serg.SpringAppKt"
 }
