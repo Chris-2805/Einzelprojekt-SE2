@@ -22,8 +22,8 @@ dependencies {
 
     implementation("io.github.pdvrieze.xmlutil:core:0.90.3")
     implementation("io.github.pdvrieze.xmlutil:serialization:0.90.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.3")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.7.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.0")
     implementation("io.ktor:ktor-client-cio:2.3.13")
 
 
