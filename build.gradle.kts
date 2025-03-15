@@ -39,10 +39,3 @@ kotlin {
     jvmToolchain(17)
 }
 
-tasks.withType<org.springframework.boot.gradle.tasks.run.BootRun> {
-    mainClass.set("at.aau.serg.SpringAppKt")
-}
-
-tasks.withType<org.gradle.jvm.tasks.Jar> {
-    manifest.attributes["Main-Class"] = "at.aau.serg.SpringAppKt"
-}
